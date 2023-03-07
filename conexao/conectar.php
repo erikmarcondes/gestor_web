@@ -1,13 +1,12 @@
 <?php
 $servidor = "localhost";
-$banco = "gestor";
+$bancodados = "gestor_web";
 $usuario = "root";
 $senha = "vertrigo";
-try {
-	$conexao = new PDO("mysql:host=$servidor;dbname=$banco", $usuario, $senha);
-	$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-	echo 'Erro: ' . $e->getMessage();
+$conexao = mysqli_connect($servidor,$usuario,$senha, $bancodados);
+if (!$conexao){
+	if (exists("../caiu.php")){header("location:../caiu.php");}
+	if (exists("caiu.php")){header("location:caiu.php");}
 	die();
 	exit;
 }

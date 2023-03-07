@@ -31,7 +31,7 @@ if (isset($usuarios_cadastro)){if ($usuarios_cadastro == "SIM"){echo "<li><a hre
 echo "</ul>";
 echo "</li>";
 //Menu Sistema - Final.
-//Menu Sair.echo "<li><a href='../acessar/sair.php'>SAIR</a></li>\n";
+//Menu Sair.echo "<li><a href='../acesso/sair.php'>SAIR</a></li>\n";
 echo "</ul>\n";
 echo "</nav>\n";
 echo "</header>\n";
