@@ -1,0 +1,592 @@
+﻿@charset utf-8;
+/********************************************************************
+* CONFIGURAÇÕES GERAIS                                              *
+********************************************************************/
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background: #4682B4;
+}
+.relatorio{
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+}
+/****************************************
+* HEADER DAS PÁGINAS
+****************************************/
+header{
+	width: 100%;
+	height: 35px;
+	position: fixed;
+	top: 0;
+	z-index: 9; /* Adiciona esta propriedade */
+}
+/****************************************
+* CABEÇALHO
+****************************************/
+.cabecalho{
+	width: 100%;
+	text-align: center;
+}
+.titulo{
+	color: #ffffff;
+	text-shadow: 2px 2px 2px #000000;
+}
+/****************************************
+* INSTRUÇÕES DE PREENCHIMENTO
+****************************************/
+.instrucoes{
+	width: 95%;
+	background: #00BFFF;
+	font-family:'Arial, Helvetica, Sans-Serif';
+	font-size:16px;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+	padding: 10px;
+	margin: 20px;
+	border: 1px solid #000000;
+	box-shadow: 5px 5px 5px #000000;
+}
+/********************************************************************
+* MENU                                                              *
+********************************************************************/
+.menu{
+	width: 100%;
+	height: 30px;
+	box-shadow: 5px 5px 5px #000000;
+	background-color: #e0ffff;
+	font-family: Ariel, Helvetica, Sans-Serif;
+	font-size: 18px;
+	color: #000000;
+}
+.menu ul{
+	list-style: none;
+	position: relative;
+}
+.menu ul ul{
+	list-style:none;
+	position: absolute;
+	visibility: hidden;
+}
+.menu ul li{
+	width: 150px;
+	float: left;
+}
+.menu ul li:hover ul{
+	visibility: visible;
+}
+.menu ul ul li{
+	float: none;
+	border-bottom: solid 1px #ccc;
+	box-shadow: 5px 5px 5px #000000;
+}
+.menu a{
+	padding:15px;
+	display:block;
+	text-decoration: none;
+	background-color: #222;
+	text-align:center;
+}
+.menu a:hover{
+	background-color:#f4f4f4;
+}
+.menu ul li a{
+	padding: 5px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	background-color: #e0ffffff;
+	color: #000000;
+}
+.menu ul li a:hover{
+	background-color: #000080;
+	color: #ffffff;
+}
+.menu ul ul li a{
+	background-color: #00bfff;
+}
+#bt_menu{
+	display: none;
+}
+label[for='bt_menu']{
+	padding:5px;
+	background-color: #e0ffff;
+	color:#000000;
+	font-family:'Arial';
+	text-align:center;
+	font-size:30px;
+	cursor:pointer;
+	display:none;
+	width:50px;
+	height:50px;
+	box-shadow: 5px 5px 5px #000000;
+}
+label[for='bt_menu']:hover{
+	background-color: #000080;
+	color: #ffffff;
+}
+/**********************************
+* FUNDO DAS PÁGINAS
+**********************************/
+.fundo{
+	width: 100%;
+	height: 100vh;
+	background-color: #4682B4;
+}
+/********************************************************************
+* CAIXAS                                                            *
+********************************************************************/
+.caixa{
+	width: 350px;
+	padding: 20px;
+	background-color: #e0ffff;
+	box-shadow: 10px 10px 10px #000000;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+/********************************************************************
+* CABECALHOS DOS FORMULÁRIOS                                                         *
+********************************************************************/
+.timbre{
+	top: 30px;
+	position: absolute;
+	width: 100%;
+}
+.timbre img{
+	float: left;
+	width: 40px;
+	height: 40px;
+}
+.timbre h1{
+	float: left;
+	top: 0;
+	left: 45px;
+	color: #ffffff;
+}
+/********************************************************************
+* MENSAGENS                                           *
+********************************************************************/
+.alerta{
+	color: #FFFF00;
+	text-shadow: 2px 2px 2px #000000;
+}
+.erro{
+	color: #ff0000;
+	text-shadow: 2px 2px 2px #000000;
+}
+.sucesso{
+	color: #00FF7F;
+	text-shadow: 2px 2px 2px #000000;
+}
+.mensagem{
+	max-width: 70%;
+	background: #bebebe;
+	text-align: center;
+	padding: 20px;
+	border: 1px solid #000000;
+	box-shadow: 5px 5px 5px #000000;
+	position: relative;
+	margin: auto;
+}
+/********************************************************************
+* FORMULÁRIOS                                           *
+********************************************************************/
+.ficha{
+	width: 98%;
+	height: auto;
+	padding: 2px;
+	position: absolute;
+	top: 70px;
+}
+.campo{
+	display: inline-block;
+	margin: 1px;
+}
+.anexo{
+	display: inline-block;
+	width: 100%;
+	margin: 1px;
+}
+.separador{
+	width: 100%;
+	position: static;
+}
+span{
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 16px;
+	font-style: bold;
+	color: #000000;
+	width: 30%;
+}
+label{
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 18px;
+	font-style: bold;
+	color: #ffffff;
+}
+.login{
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 18px;
+	font-style: bold;
+	color: #000000;
+	width:150px;
+	float:left;
+}
+.serie{
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 18px;
+	font-style: bold;
+	color: #ffffff;
+	width:100px;
+	float:left;
+}
+input[type=text], [type=date],[type=password], select{
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	text-transform: uppercase;
+	font-family: Calibri, courier new, serif;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 2px;
+}
+input[type=email]{
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	text-transform: lowercase;
+	font-family: Calibri, courier new, serif;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 2px;
+}
+input[type=text]:focus, [type=email]:focus, [type=date]:focus, [type=password]:focus, select:focus{
+	background-color:#ffff00;
+}
+textarea{
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	//text-transform: uppercase;
+	font-family: Calibri, courier new, serif;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 2px;
+}
+textarea:focus, [type=textarea]:focus, [type=date]:focus, [type=password]:focus, select:focus{
+	background-color:#ffff00;
+}
+input[type=file]{
+	width: 70%;
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	font-family: Calibri, courier new, serif;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 2px;
+}
+input[type=file]:focus{
+	background-color:#ffff00;
+}
+input[type=hidden]{
+	border:none;
+}
+/********************************************************************
+* BOTOES                                                            *
+********************************************************************/
+.navegacao{
+	width: 100%;
+	padding: 3px;
+	align-items: center;
+	display: block;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+.localizar{
+	padding: 3px;
+	display: table-cell;
+	vertical-align: middle;
+	align-items: center;
+	//display: block;
+	//flex-direction: row;
+	//flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+.movimentar{
+	padding: 3px;
+	display: table-cell;
+	vertical-align: middle;
+	align-items: center;
+	//display: block;
+	//flex-direction: row;
+	//flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+.botao{
+	width: 25px;
+	height: 25px;
+	padding: 2px;
+	background: #CDC8B1;
+	border-top: 2px solid #ffffff;
+	border-left: 2px solid #ffffff;
+	border-bottom: 2px solid #000000;
+	border-right: 2px solid #000000;
+	margin: 5px;
+}
+.botao:hover{
+	background: #CDC9A5;
+	border-top: 2px solid #000000;
+	border-left: 2px solid #000000;
+	border-bottom: 2px solid #ffffff;
+	border-right: 2px solid #ffffff;
+}
+.botao_detalhe{
+	width: 15px;
+	height: 15px;
+	padding: 2px;
+	background: #CDC8B1;
+	border-top: 2px solid #ffffff;
+	border-left: 2px solid #ffffff;
+	border-bottom: 2px solid #000000;
+	border-right: 2px solid #000000;
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+.botao_detalhe:hover{
+	background: #CDC9A5;
+	border-top: 2px solid #000000;
+	border-left: 2px solid #000000;
+	border-bottom: 2px solid #ffffff;
+	border-right: 2px solid #ffffff;
+}
+.botao_ir_para{
+	width: 25%;
+	height: 35px;
+	padding: 2px;
+	background: #CDC8B1;
+	border-top: 2px solid #ffffff;
+	border-left: 2px solid #ffffff;
+	border-bottom: 2px solid #000000;
+	border-right: 2px solid #000000;
+}
+/********************************************************************
+* ATALHOS                                                      ..   *
+********************************************************************/
+a{
+	text-decoration: none;
+	color: #00FFFF;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 14px;
+}
+a:hover{
+	color: #FFFF00;
+}
+/********************************************************************
+* PARÁGRAFOS                                                        *
+********************************************************************/
+p{
+	color: #ffffff;
+	text-align: justify;
+	font-family: "Arial,Helvetica,Sans-Serif";
+	font-size: 18px;
+	text-indent: 40px;
+	margin: 20px;
+}
+/********************************************************************
+* TABELAS                                                           *
+********************************************************************/
+.tabela_responsiva{
+	width: 95%;
+	margin: 2px auto;
+	font-family: Calibri, courier new, serif;
+	font-size: 14px;
+	font-weight: bold;
+	box-shadow: 10px 10px 10px #000000;
+}
+.tabela_responsiva th{
+	background-color: #000080;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+.tabela_responsiva th, .tabela_responsiva td{
+	border: 1px solid black;
+	padding: 1px;
+}
+.detalhe{
+	width: 100px;
+}
+/*=========================================================
+* CONFIGURAÇÕES RESPONSIVAS
+=========================================================*/
+@media only screen and (max-width: 757px){
+	/******************************************************
+	* MENU
+	******************************************************/
+	.menu{
+		margin-left:-100%;
+		transition:all .4s;
+		font-size: 1.5em;
+		margin-top:5px;
+	}
+	.menu>ul{
+		margin-left:0;
+	}
+	.menu ul li{
+		width: 100%;
+		float: none;
+		box-shadow: 5px 5px 5px #888888;
+	}
+	.menu ul ul{
+		position: static;
+		overflow: hidden;
+		max-height: 0px;
+		transition:all .4s;
+	}
+	.menu ul ul li a{
+		background-color: #00bfff;
+	}
+	.menu ul li:hover ul{
+		height: auto;
+		max-height: 400px;
+		transition: all .4s;
+	}
+	label[for='bt_menu']{
+		display:block;
+	}
+	#bt_menu:checked ~ .menu{
+		margin-left:0;
+	}
+	/******************************************************
+	* CABEÇALHO DOS FORMULÁRIOS
+	******************************************************/
+	.timbre{
+		top: 100px;
+	}
+	/******************************************************
+	* FORMULÁRIOS
+	******************************************************/
+	.ficha{
+		width: 98%;
+		height: auto;
+		padding: 10px;
+		position: absolute;
+		top: 150px;
+	}
+	.campo{
+		width: 95%;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	label{
+		width: 100%;
+		font-size: 1.5em;
+	}
+	.login{
+		font-size: 1.5em;
+	}
+	.serie{
+		font-size: 1.5em;
+	}
+	input[type=text],[type=email],[type=date],[type=password], select{
+		width: 100%;
+		font-size: 1.5em;
+	}
+	textarea{
+		font-size: 2em;
+	}
+	input[type=file]{
+		font-size: 1.5em;
+	}
+	.instrucoes {
+		width: 90%;
+	}
+	/******************************************************
+	* BOTÕES
+	******************************************************/
+	.localizar{
+		width: 98%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.movimentar{
+		width: 98%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.botao{
+		width: 50px;
+		height: 50px;
+	}
+	.botao_detalhe{
+		width: 50px;
+		height: 50px;
+	}
+	.botao_ir_para{
+		width: 50px;
+		height: 50px;
+	}
+	/******************************************************
+	* ATALHOS
+	******************************************************/
+	a{
+		font-size: 1.5em;
+	}
+	/******************************************************
+	* MENSAGEM
+	******************************************************/
+	.alerta{
+		font-size: 2em;
+	}
+	.erro{
+		font-size: 2em;
+	}
+	.sucesso{
+		font-size: 2em;
+	}
+	.mensagem{
+		width: 95%;
+		top: 20%;
+	}
+	/******************************************************
+	* TABELAS
+	******************************************************/
+	.tabela_responsiva{
+		display: block;
+		position: relative;
+		width: 100%;
+	}
+	.tabela_responsiva tr{
+		border-bottom: 1px solid #dddddd;
+	}
+	.tabela_responsiva td{
+		border: 0;
+		display: inline-block;
+		width: 98%;
+		font-size: 1.5em;
+	}
+	/*
+	.tabela_responsiva td:not(:first-child){
+		display: block;
+	}
+	*/
+	.tabela_responsiva thead{
+		display: none;
+	}
+}

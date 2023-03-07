@@ -1,0 +1,29 @@
+CREATE TABLE usuarios(
+registro INTEGER NOT NULL AUTO_INCREMENT,
+estabelecimento VARCHAR(20),
+utilizador VARCHAR(20),
+chave VARCHAR(32),
+consultas_cadastro VARCHAR(3) DEFAULT 'NAO',
+consultas_relatorios VARCHAR(3) DEFAULT 'NAO',
+usuarios_cadastro VARCHAR(3) DEFAULT 'NAO',
+usuarios_relatorios VARCHAR(3) DEFAULT 'NAO',
+PRIMARY KEY (registro)
+);
+
+INSERT INTO usuarios (
+estabelecimento,
+utilizador,
+chave,
+consultas_cadastro,
+consultas_relatorios,
+usuarios_cadastro,
+usuarios_relatorios
+) VALUES (
+'EMPRESA',
+'ADMINISTRADOR',
+'ADM',
+'SIM',
+'SIM',
+'SIM',
+'SIM'
+);
